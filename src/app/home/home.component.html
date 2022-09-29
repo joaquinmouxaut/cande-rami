@@ -1,0 +1,99 @@
+<div id="hero" class="hero">
+  <div class="video">
+    <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+      <source src="./assets/video/video cabecera.mp4" type="video/mp4"/>
+    </video>
+    
+    <div class="d-flex justify-content-center">
+      <h1>¡Nos Casamos!</h1>
+    </div>
+    
+
+    <div class="title d-flex justify-content-center">
+      <img src="./assets/images/cande-rami.png" class="mx-auto"/>
+    </div>
+  
+    <div class="gradient"></div>
+  </div>
+  
+
+  <h4>
+    ¡Y queremos que nos acompañes
+    <br>en este día tan especial!
+  </h4>
+
+  <div class="separador d-flex justify-content-center">
+    <img src="./assets/images/separador.png" class="mx-auto"/>
+  </div>
+</div>
+
+<div class="container">
+  <div id="evento" class="evento d-flex flex-column align-items-center justify-content-around">
+    <div>
+      <div class="d-flex flex-column align-items-center">
+        <h2>El evento</h2>
+        <img src="./assets/images/decoracion.png" class="decoracion"/>
+      </div>
+  
+      <div class="d-flex flex-column align-items-center">
+        <img src="./assets/images/calendar.png" class="calendar" />
+        <p>23 de diciembre de 2022</p>
+        <h3>19:00HS</h3>
+        <img src="./assets/images/separador-rojo.png" class="sep-rojo"/>
+      </div>
+  
+      <div class="cont-foto d-flex justify-content-center">
+        <img src="./assets/images/fotoEstancia.jpeg" class="foto" />
+      </div>
+    </div>
+
+    <div>
+      <div class="d-flex flex-column align-items-center">
+        <h2>El civil</h2>
+        <img src="./assets/images/decoracion.png" class="decoracion"/>
+      </div>
+  
+      <div class="d-flex flex-column align-items-center">
+        <img src="./assets/images/anillos.png" class="anillos" />
+        <p>23 de diciembre de 2022</p>
+        <h3>20:00HS</h3>
+        <img src="./assets/images/separador-rojo.png" class="sep-rojo"/>
+      </div>
+  
+      <div class="cont-foto d-flex justify-content-center">
+        <img src="./assets/images/fotoEstancia.jpeg" class="foto" />
+      </div>
+    </div>
+  </div>
+
+  <div class="sep d-flex justify-content-center">
+    <img src="./assets/images/separador.png" class="mx-auto"/>
+  </div>
+
+  <div id="lugar" class="lugar">
+
+    <div class="d-flex flex-column align-items-center">
+      <h2>El lugar</h2>
+      <img src="./assets/images/decoracion.png" class="decoracion"/>
+    </div>
+
+    <div class="d-flex flex-column align-items-center">
+      <img src="./assets/images/ubicacion.png" class="ubicacion" />
+      <p class="estancia">Estancia Victoria</p>
+      <p class="ruta">Ruta E54 Km 1.5</p>
+      <p class="camino">Camino al Cerro Pan de Azucar</p>
+      <p class="villa">Villa Allende - Córdoba</p>
+    </div>
+
+    <div class="cont-foto d-flex justify-content-center">
+      <img src="./assets/images/fotoEstancia.jpeg" class="fotoEstancia" />
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      
+    </div>
+  </div>
+</div>
