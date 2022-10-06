@@ -1,3 +1,5 @@
+@import '/src/assets/styles/mixins';
+
 .hero {
   height: 100vh;
 
@@ -22,6 +24,10 @@
 
     img {
       width: 70%;
+
+      @include tablet {
+        width: 40rem;
+      }
     }
   }
 
@@ -130,6 +136,11 @@
       height: 12rem;      
       object-fit: cover;
       object-position: center center;
+
+      @include tablet {
+        width: unset;
+        height: 80%;
+      }
     }
   }
 
@@ -177,6 +188,10 @@
         height: 20rem;
         object-fit: cover;
         object-position: center center;
+
+        @include tablet {
+          height: 60rem;
+        }
     }
   }
 }
@@ -186,6 +201,10 @@
   height: 18rem;
   border: 2px solid #AD3D20;
   margin-bottom: 3rem;
+
+  @include tablet {
+    height: 40rem;
+  }
 
   .agm-map-container-inner {
     

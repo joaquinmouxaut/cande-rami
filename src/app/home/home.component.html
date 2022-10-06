@@ -22,14 +22,14 @@
     <br>en este día tan especial!
   </h4>
 
-  <div class="separador d-flex justify-content-center">
+  <div class="separador d-flex justify-content-center w-100">
     <img src="./assets/images/separador.png" class="mx-auto"/>
   </div>
 </div>
 
 <div class="container">
-  <div id="evento" class="evento d-flex flex-column align-items-center justify-content-around">
-    <div>
+  <div id="evento" class="evento row">
+    <div class="col-12 col-md-6 py-auto d-flex flex-column justify-content-centerd-flex flex-column justify-content-center">
       <div class="d-flex flex-column align-items-center">
         <h2>El evento</h2>
         <img src="./assets/images/decoracion.png" class="decoracion"/>
@@ -41,13 +41,13 @@
         <h3>19:00HS</h3>
         <img src="./assets/images/separador-rojo.png" class="sep-rojo"/>
       </div>
-  
-      <div class="cont-foto d-flex justify-content-center">
-        <img src="./assets/images/fotoEstancia.jpeg" class="foto" />
-      </div>
     </div>
 
-    <div>
+    <div class="cont-foto col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+      <img src="./assets/images/elcivil.jpg" class="foto m-0" />
+    </div>
+
+    <div class="col-12 col-md-6 offset-md-6">
       <div class="d-flex flex-column align-items-center">
         <h2>El civil</h2>
         <img src="./assets/images/decoracion.png" class="decoracion"/>
@@ -59,14 +59,14 @@
         <h3>20:00HS</h3>
         <img src="./assets/images/separador-rojo.png" class="sep-rojo"/>
       </div>
-  
-      <div class="cont-foto d-flex justify-content-center">
-        <img src="./assets/images/fotoEstancia.jpeg" class="foto" />
-      </div>
     </div>
   </div>
 
-  <div class="sep d-flex justify-content-center">
+  <div *ngIf="width > 576" class="sep d-flex justify-content-center">
+    <img src="./assets/images/collage.jpg" class="mx-auto"/>
+  </div>
+
+  <div *ngIf="width <= 576" class="sep d-flex justify-content-center">
     <img src="./assets/images/separador.png" class="mx-auto"/>
   </div>
 
