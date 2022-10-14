@@ -5,7 +5,7 @@
 
   .video {
     position: relative;
-    height: 80%;
+    height: 100%;
     width: 100%;
     z-index: -1;
 
@@ -14,6 +14,7 @@
       width: 100%;
       display: block;
       object-fit: cover;
+      object-position: top;
     }
   }
 
@@ -31,37 +32,55 @@
     }
   }
 
-  .gradient {
-    width: 100%;
-    height: 5rem;
-    position: absolute;
-    bottom: -1px;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,efeee9+100&0+0,1+100 */
-    background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007db9e8', endColorstr='#efeee9', GradientType=0);
-    /* IE6-9 */
-  }
-
   h4 {
     margin-top: 4rem;
   }
 
-  .separador {
-    position: absolute;
-    bottom: 0.25rem;
-    width: fit-content;
 
-    img {
-      height: unset;
-      position: unset;
-      width: 50%;
-    }
+
+}
+
+.separador {
+  bottom: 0.25rem;
+  width: fit-content;
+
+  img {
+    height: unset;
+    position: unset;
+    width: 50%;
   }
+}
+
+.gradient {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  bottom: -1px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,efeee9+100&0+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(239, 238, 233, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007db9e8', endColorstr='#efeee9', GradientType=0);
+  /* IE6-9 */
+}
+
+.top-gradient {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efeee9+0,7db9e8+100&1+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(239, 238, 233, 1) 0%, rgba(125, 185, 232, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(239, 238, 233, 1) 0%, rgba(125, 185, 232, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(239, 238, 233, 1) 0%, rgba(125, 185, 232, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 
 }
 
@@ -79,19 +98,22 @@
 
 .decoracion {
   width: 8rem;
+  margin-bottom: 1.5rem;
 }
 
 .container {
-  margin-top: 5rem;
+  max-width: 120rem;
 
   .evento {
-    margin-top: 4rem;
-    padding: 1rem 0;
-    height: 100vh;
+    min-height: 100vh;
+
+    .sarasa {
+      @include tablet {
+        width: 30rem;
+      }
+    }
 
     .calendar {
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
       width: 3rem;
     }
 
@@ -101,13 +123,6 @@
 
     .img {
       height: 5.8rem;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .horario {
-      margin-top: 2rem;
-      margin-bottom: 4rem;
     }
 
     .sep-rojo {
@@ -116,61 +131,57 @@
     }
 
     .anillos {
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
       width: 5rem;
     }
-
-
   }
 
   .separador {
     width: fit-content;
-    margin-top: -3rem;
   }
 
   .cont-foto {
+    position: relative;
+
+
     img {
-      margin: 1rem 0 2rem 0;
-      width: 90%;
-      height: 12rem;      
+      margin: 0;
+      width: 75%;
+      height: 11rem;
       object-fit: cover;
       object-position: center center;
 
       @include tablet {
-        width: unset;
-        height: 80%;
+        width: 30rem;
+        height: 20rem;
       }
     }
   }
 
   .lugar {
-    margin-top: 4rem;
-    padding-top: 1rem;
-    height: 100vh;
+    min-height: 100vh;
 
     p {
-        font-family: 'Quicksand', sans-serif;
-        text-transform: uppercase;
-        margin-bottom: .5rem;
+      font-family: 'Quicksand', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: .5rem;
     }
 
     .estancia {
-        font-size: 2rem;
+      font-size: 2rem;
     }
 
     .ruta {
-        font-size: 1.6rem;
-        color: #AD3D20;
+      font-size: 1.6rem;
+      color: #AD3D20;
     }
 
     .camino {
-        font-size: 1.3rem;
-        color: #AD3D20;
+      font-size: 1.3rem;
+      color: #AD3D20;
     }
 
     .villa {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
 
     .ubicacion {
@@ -184,15 +195,30 @@
     }
 
     .fotoEstancia {
-        width: 95%;
-        height: 20rem;
-        object-fit: cover;
-        object-position: center center;
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+      object-position: center center;
 
-        @include tablet {
-          height: 60rem;
-        }
+      @include tablet {
+        height: 60rem;
+      }
     }
+
+    .mapa {
+      top: 3rem;
+      width: 90%;
+      right: 5%;
+      position: absolute;
+
+      @include tablet {
+        width: 80%;
+        top: 10rem;
+        right: 10%;
+      }
+    }
+
+
   }
 }
 
@@ -207,8 +233,8 @@
   }
 
   .agm-map-container-inner {
-    
-    width: calc(100% - 2px) !important;
-    height: calc(100% - 2px) !important;
+
+    width: calc(100% - 0px) !important;
+    height: calc(100% - 0px) !important;
   }
 }
