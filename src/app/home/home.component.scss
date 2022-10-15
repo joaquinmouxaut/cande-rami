@@ -85,14 +85,16 @@
 }
 
 .sep {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   width: 100%;
 
   img {
     height: unset;
     position: unset;
-    width: 50%;
+    width: 80%;
+
+    @include tablet {
+      width: 50%;
+    }
   }
 }
 
@@ -142,6 +144,10 @@
   .cont-foto {
     position: relative;
 
+    @include tablet {
+      height: 40rem;
+    }
+
 
     img {
       margin: 0;
@@ -185,8 +191,6 @@
     }
 
     .ubicacion {
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
       height: 3rem;
     }
 
@@ -196,24 +200,26 @@
 
     .fotoEstancia {
       width: 100%;
-      height: 25rem;
+      height: 100%;
       object-fit: cover;
       object-position: center center;
 
       @include tablet {
-        height: 60rem;
+        height: 100%;
       }
     }
 
     .mapa {
-      top: 3rem;
+      height: 80%;
+      top: 10%;
       width: 90%;
       right: 5%;
       position: absolute;
 
-      @include tablet {
+      @include tablet {   
+        height: 90%;     
         width: 80%;
-        top: 10rem;
+        top: 5%;
         right: 10%;
       }
     }
@@ -223,18 +229,18 @@
 }
 
 ::ng-deep agm-map {
-  width: 80%;
-  height: 18rem;
+  width: 100%;
+  height: 100%;
   border: 2px solid #AD3D20;
   margin-bottom: 3rem;
-
-  @include tablet {
-    height: 40rem;
-  }
 
   .agm-map-container-inner {
 
     width: calc(100% - 0px) !important;
     height: calc(100% - 0px) !important;
   }
+}
+
+.final {
+  min-height: 100vh;
 }
