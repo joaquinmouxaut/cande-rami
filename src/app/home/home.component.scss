@@ -84,6 +84,23 @@
 
 }
 
+.contenedor-foto {
+  height: fit-content;
+
+  img {
+    margin: 0;
+    width: 75%;
+    height: 11rem;
+    object-fit: cover;
+    object-position: center center;
+
+    @include tablet {
+      width: 30rem;
+      height: 20rem;
+    }
+  }
+}
+
 .sep {
   width: 100%;
 
@@ -243,4 +260,31 @@
 
 .final {
   min-height: 100vh;
+
+  h4 {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h3 {
+    font-family: 'Abhaya Libre', serif;
+  }
+
+  .aqui {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .boton {
+    height: 2.5rem;
+    cursor: pointer;
+  }
+
+  .cbu {
+    font-family: 'Quicksand', sans-serif;
+    color: #AD3D20;
+  }
+
+  .copas {
+    height: 8rem;
+  }
 }
