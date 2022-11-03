@@ -180,7 +180,7 @@
           <h2>¿Nos acompañas?</h2>
           <h4 class="mb-5">
             Te agradeceríamos si nos confirmas
-            <br />antes del 10 de diciembre.
+            <br *ngIf="width > 576"/>antes del 10 de diciembre.
           </h4>
           <a
             target="_blank"
@@ -196,25 +196,26 @@
       </div>
 
       <div class="row">
-        <div class="d-flex flex-column align-items-center mb-3">
+        <!-- <div class="d-flex flex-column align-items-center mb-3">
           <h3>
             No hay mejor regalo que tu
-            <br />presencia en este día tan especial.
+            <br *ngIf="width > 576"/>presencia en este día tan especial.
           </h3>
-        </div>
+        </div> -->
 
         <div class="d-flex flex-column align-items-center">
           <h4>
-            Pero si queres darnos uno para esta
-            <br />nueva etapa que comienza...
+            Si queres darnos un regalo para esta nueva            
+            <br *ngIf="width > 576"/>etapa que comienza, aquí te dejamos los datos.
           </h4>
         </div>
       </div>
 
       <div class="d-flex flex-column align-items-center">
-        <h2>CBU</h2>
+        <h2>Cuentas en Pesos y Dólares</h2>
         <img src="./assets/images/decoracion.png" class="decoracion" />
-        <p class="cbu">83 0049 0791 6927 1119 0828</p>
+        <p class="cbu">CBU: 83 0049 0791 6927 1119 0828</p>
+        <p class="cbu">Alias: CANDE.RAMI.2312</p>
         <img src="./assets/images/copas.png" class="copas mx-auto mt-4" />
       </div>
     </div>
